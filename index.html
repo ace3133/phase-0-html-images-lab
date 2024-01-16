@@ -10,3 +10,49 @@
     <!-- Your code here -->
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tests</title>
+</head>
+<body>
+
+<!-- First <img> -->
+<img id="firstImg" src="path/to/first-image.jpg">
+
+<!-- Second <img> -->
+<img id="secondImg" src="path/to/second-image.jpg" alt="Second Image">
+
+<!-- Third <img> -->
+<img id="thirdImg" src="path/to/third-image.jpg" alt="Third Image" title="Third Image Title">
+
+<script>
+    // Test 1: Existence of the first <img>
+    const firstImg = document.getElementById('firstImg');
+    console.assert(firstImg !== null, 'Test 1 failed: First <img> does not exist');
+
+    // Test 2: Valid src attribute for the first <img>
+    console.assert(firstImg.src.trim() !== '', 'Test 1 failed: First <img> does not have a valid src attribute');
+
+    // Test 3: Existence of the second <img>
+    const secondImg = document.getElementById('secondImg');
+    console.assert(secondImg !== null, 'Test 2 failed: Second <img> does not exist');
+
+    // Test 4: Valid src and alt attributes for the second <img>
+    console.assert(secondImg.src.trim() !== '', 'Test 2 failed: Second <img> does not have a valid src attribute');
+    console.assert(secondImg.alt.trim() !== '', 'Test 2 failed: Second <img> does not have a valid alt attribute');
+
+    // Test 5: Existence of the third <img>
+    const thirdImg = document.getElementById('thirdImg');
+    console.assert(thirdImg !== null, 'Test 3 failed: Third <img> does not exist');
+
+    // Test 6: Valid src, alt, and title attributes for the third <img>
+    console.assert(thirdImg.src.trim() !== '', 'Test 3 failed: Third <img> does not have a valid src attribute');
+    console.assert(thirdImg.alt.trim() !== '', 'Test 3 failed: Third <img> does not have a valid alt attribute');
+    console.assert(thirdImg.title.trim() !== '', 'Test 3 failed: Third <img> does not have a valid title attribute');
+</script>
+
+</body>
+</html>
